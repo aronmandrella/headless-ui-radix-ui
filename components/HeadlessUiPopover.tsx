@@ -54,7 +54,7 @@ function PopoverRoot({
 }
 
 function PopoverButton<As extends React.ElementType<any> = "button">(
-  /* This typing would be more complex if we wan't to handle it properly instead of "good-enough" */
+  /* This typing should be improved (works nice outside, but in function resolves to any) */
   props: { as: As } & React.ComponentProps<As>
 ) {
   const context = useContext(PopoverContext);
